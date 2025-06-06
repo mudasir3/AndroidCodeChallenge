@@ -41,14 +41,14 @@ data class MediaItem(
     val displayTitle: String
         get() = name ?: title ?: "Untitled"
 
-    val releaseDateOrFirstAirDate: String
-        get() = releaseDate ?: firstAirDate ?: "Unknown"
-
     val fullPosterUrl: String?
         get() = posterPath?.let { "https://image.tmdb.org/t/p/w500$it" }
 
+    val fullDetailPosterUrl: String?
+        get() = posterPath?.let { "https://image.tmdb.org/t/p/w500$it" }
+
     val fullBackdropUrl: String?
-        get() = backdropPath?.let { "https://image.tmdb.org/t/p/w780$it" }
+        get() = backdropPath?.let { "https://image.tmdb.org/t/p/original$it" }
 
 }
 

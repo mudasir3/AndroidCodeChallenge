@@ -38,7 +38,7 @@ fun DetailScreen(navController: NavController, mediaItem: MediaItem) {
     ) {
 
         // An AsyncImagePainter for loading remote image
-        val painter = rememberAsyncImagePainter(model = mediaItem.fullPosterUrl)
+        val painter = rememberAsyncImagePainter(model = mediaItem.fullDetailPosterUrl)
         val painterState = painter.state
 
         // If image loading fails, show a local placeholder image
@@ -82,7 +82,7 @@ fun DetailScreen(navController: NavController, mediaItem: MediaItem) {
                 onClick = {
                     // Encode image URL to safely pass in navigation
                     val encodedUrl = URLEncoder.encode(
-                        mediaItem.fullPosterUrl,
+                        mediaItem.fullBackdropUrl,
                         StandardCharsets.UTF_8.toString()
                     )
                     // Navigate to PlayerScreen with imageUrl

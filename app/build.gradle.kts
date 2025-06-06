@@ -78,18 +78,8 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    //androidTestImplementation(libs.ui.test.junit4)
     androidTestImplementation(libs.androidx.test.core)
-    //androidTestImplementation(libs.ui.test.junit4.android)
-    //debugImplementation(libs.ui.test.manifest)
-
-    androidTestImplementation(libs.mockito.core)
-    androidTestImplementation(libs.mockito.android)
-    //testImplementation(libs.mockito.inline)
-    testImplementation(libs.mockito.kotlin)
 
     testImplementation("io.mockk:mockk:1.13.9") // latest as of 2025
 
-    testImplementation("io.ktor:ktor-client-mock:2.3.5") // Use your Ktor version
-    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
 }

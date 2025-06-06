@@ -1,5 +1,6 @@
 package com.example.library.di
 
+import com.example.library.api.Constants.API_KEY
 import com.example.library.api.TmdbApi
 import com.example.library.repository.MediaRepository
 import io.ktor.client.*
@@ -19,6 +20,6 @@ val libraryModule = module {
             install(HttpCache)
         }
     }
-    single { TmdbApi(get(), apiKey = "3d0cda4466f269e793e9283f6ce0b75e") }
+    single { TmdbApi(get(), apiKey = API_KEY) }
     single { MediaRepository(get()) }
 }
